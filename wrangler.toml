@@ -1,0 +1,24 @@
+name = "quest-list-worker557"
+main = "src/index.ts"
+compatibility_date = "2025-05-25"
+
+# D1 binding: stores quests, completion state, priorities, emojis, and attachment metadata.
+[[d1_databases]]
+binding = "TODO_DB"
+database_name = "quest-list-worker-todo-db"
+database_id = "650d9664-4a11-47dd-874b-bbb38d2113fa"
+
+# KV binding: stores app preferences such as the selected theme and daily vibe.
+[[kv_namespaces]]
+binding = "TODO_KV"
+id = "dc20aa76911b4a85afddc2163255e770"
+
+# R2 binding: stores optional todo attachments uploaded as quest loot.
+[[r2_buckets]]
+binding = "TODO_BUCKET"
+bucket_name = "quest-list-worker-todo-bucket"
+
+[vars]
+APP_NAME = "Quest List"
+DEFAULT_THEME = "cosmic-candy"
+MAX_ATTACHMENT_BYTES = "1048576"
